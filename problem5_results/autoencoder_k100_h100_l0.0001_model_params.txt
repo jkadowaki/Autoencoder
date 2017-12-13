@@ -1,0 +1,1 @@
+{'lambda_': 0.0001, 'train_time': 'days=00, h=00, m=01, s=21', 'nit': 3716, 'success': True, 'message': b'CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL', 'visible_size': 784, 'hidden_size': 100}

@@ -123,7 +123,7 @@ def autoencoder_cost_and_grad(theta, visible_size, hidden_size, lambda_, data):
 
     w1_grad = delta2.dot(data.T) / m + lambda_ * w1
     w2_grad = delta3.dot(a2.T) / m + lambda_ * w2
-    b1_grad = np.sum(delta2, axis=1) /m
+    b1_grad = np.sum(delta2, axis=1) / m
     b2_grad = np.sum(delta3, axis=1) / m
 
     
@@ -212,7 +212,7 @@ def autoencoder_cost_and_grad_sparse(theta, visible_size, hidden_size, lambda_, 
     sparsity_der = beta_ * (-rho_/rhat + (1-rho_)/(1-rhat))
     
     delta3 = -(data - h) * derivative(z3)
-    delta2 = (w2.T.dot(delta3) + sparsity_der) * derivative(z2)
+    delta2 = (w2.T.dot(delta3) + np.repeat(sparsity_der,m).reshape((sparsity_der.shape[0],m))) * derivative(z2)
 
 
     #---------------------------#

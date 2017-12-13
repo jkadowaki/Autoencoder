@@ -1,0 +1,1 @@
+{'lambda_': 0.0001, 'train_time': 'days=00, h=00, m=05, s=41', 'nit': 4001, 'success': False, 'message': b'STOP: TOTAL NO. of ITERATIONS EXCEEDS LIMIT', 'visible_size': 784, 'hidden_size': 10}
